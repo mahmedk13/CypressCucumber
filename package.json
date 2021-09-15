@@ -1,0 +1,33 @@
+{
+  "name": "cypressframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "triggerCucumberTests_chrome": "node cy-run.js --spec cypress/integration/*.feature --browser chrome && node ./cypress/reporting/report.js",
+    "triggerCucumberTests_firefox": "node cy-run.js --spec cypress/integration/*.feature --browser firefox && node ./cypress/reporting/report.js",
+    "triggerCucumberTests_headless": "node cy-run.js --spec cypress/integration/*.feature && node ./cypress/reporting/report.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "^7.7.0",
+    "cypress-cucumber-preprocessor": "^4.1.4",
+    "cypress-xpath": "^1.6.2",
+    "html-webpack-plugin": "^5.3.2",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumberJson",
+      "filePrefix": "",
+      "fileSuffix": ""
+    }
+  }
+}

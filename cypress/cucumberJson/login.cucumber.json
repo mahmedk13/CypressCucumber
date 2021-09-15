@@ -1,0 +1,137 @@
+[
+  {
+    "description": "              As a valid user\n              I want to log into Application",
+    "keyword": "Feature",
+    "name": "Login to Application",
+    "line": 1,
+    "id": "login-to-application",
+    "tags": [],
+    "uri": "login.feature",
+    "elements": [
+      {
+        "id": "login-to-application;valid-login",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Valid Login",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "invoke function \"navigateToApp\"",
+            "result": {
+              "status": "passed",
+              "duration": 990000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "username",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "cpars.cor@fda.hhs.gov",
+                      "Appianalp@1818"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 10,
+            "name": "invoke function \"login\" with",
+            "result": {
+              "status": "passed",
+              "duration": 6108000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "invoke function \"verifyTitle\" with \"COR Home - FDA CPARS Compliance Tracking System (COR)\"",
+            "result": {
+              "status": "passed",
+              "duration": 631000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-to-application;valid-logout",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Valid Logout",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "invoke function \"navigateToApp\"",
+            "result": {
+              "status": "passed",
+              "duration": 1261000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "username",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "cpars.cor@fda.hhs.gov",
+                      "Appianalp@1818"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 16,
+            "name": "invoke function \"login\" with",
+            "result": {
+              "status": "passed",
+              "duration": 6610000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "invoke function \"logout\"",
+            "result": {
+              "status": "passed",
+              "duration": 2461000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "invoke function \"isLoginPageDisplayed\"",
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
